@@ -1,0 +1,9 @@
+.bigbutton {
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+text-align: center;
+width: 100%;
+text-decoration: none;
+display: inline-block;
+}

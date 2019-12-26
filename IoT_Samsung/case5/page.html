@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="js/mqttws31.js"></script>
+  <script src="js/vis.js"></script>
+    <link href="css/vis.css" rel="stylesheet" type="text/css" />
+  <script src="js/main.js"></script>
+   <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+</head>
+<body>
+  <div style="background-color:white" id="visualization"></div>
+  <script type="text/javascript">
+      var container = document.getElementById('visualization');
+      var items = [
+        {x: '2014-06-11', y: 10},
+        {x: '2014-06-12', y: 25},
+        {x: '2014-06-13', y: 30},
+        {x: '2014-06-14', y: 10},
+        {x: '2014-06-15', y: 15},
+        {x: '2014-06-16', y: 30}
+      ];
+      var dataset = new vis.DataSet(items);
+      var options = {
+        start: '2014-06-10',
+        end: '2014-06-18'
+      };
+      var graph2d = new vis.Graph2d(container, dataset, options);
+  </script>
+  <input type="button" class="bigbutton" onclick="light_on()" value="LIGHT ON"/>
+  <input type="button" class="bigbutton" onclick="light_off()" value="LIGHT OFF"/>
+</body>
+
+</html>
