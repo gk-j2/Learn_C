@@ -18,12 +18,16 @@ int		ft_atoi(char *str)
 
 	n = 0;
 	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i = i + 1;
 	flag = 1;
 	if (str[i] == '-')
 	{
 		flag = -1;
 		i = i + 1;
 	}
+	else if (str[i] == '+')
+		i = i + 1;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		n = 10 * n + (str[i] - '0');

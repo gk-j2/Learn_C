@@ -22,5 +22,4 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i]);
 		i = i + 1;
 	}
-	ft_putchar('\n');
 }

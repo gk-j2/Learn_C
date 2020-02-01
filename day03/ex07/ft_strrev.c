@@ -18,8 +18,8 @@ char	*ft_strrev(char *str)
 	char ch;
 
 	i = 0;
-	j = sizeof(str);
-	half = j / 2;
+	j = sizeof(str) - 1;
+	half = sizeof(str) / 2;
 	while (i < half)
 	{
 		ch = str[i];
