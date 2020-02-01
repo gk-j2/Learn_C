@@ -10,28 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+int isPrime(int nb) {
+	while (i < nb)
+	{
+		if (nb % i == 0)
+			ans = ans + 1;
+		i = i + 1;
+	}
+	if (ans == 0)
+		return (nb);
+	else
+	{
+		ans = 0;
+		i = 2;
+		nb = nb + 1;
+	}
+
+}
+
 int		ft_find_next_prime(int nb)
 {
 	int i;
 	int ans;
 
-	ans = 0;
-	i = 2;
-	while (1)
+	if (nb <= 2)
+		return (2);
+	if (nb == 3)
+		return (3);
+	while (isPrime(nb))
 	{
-		while (i < nb)
-		{
-			if (nb % i == 0)
-				ans = ans + 1;
-			i = i + 1;
-		}
-		if (ans == 0)
-			return (nb);
-		else
-		{
-			ans = 0;
-			i = 2;
-			nb = nb + 1;
-		}
+		nb++;
 	}
+	return (nb)
 }
